@@ -15,8 +15,8 @@ Key: FEB
 Value: 2023-02-20
 
 
-## problem statement
-# create a table called 'processed_dtl' with columns id int, mth_key varchar(10), processed_date Date
-# insert few records
-# Write java program to find month wise max processed date. 
-# Print MONTH KEY and MAX Processed Date for each Month
+# problem statement
+## create a table called 'processed_dtl' with columns id int, mth_key varchar(10), processed_date Date
+## insert few records
+## Write java program to find month wise max processed date. 
+## Print MONTH KEY and MAX Processed Date for each Month
