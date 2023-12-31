@@ -1,7 +1,7 @@
-## Problem Statement
+# Problem Statement
 find maxinum date value for list of values for each key
 
-# Example: 
+## Example: 
 Key: JAN
 Values: 2023-01-01, 2023-01-21
 
@@ -16,7 +16,7 @@ Value: 2023-02-20
 
 
 # problem statement
-## create a table called 'processed_dtl' with columns id int, mth_key varchar(10), processed_date Date
-## insert few records
-## Write java program to find month wise max processed date. 
-## Print MONTH KEY and MAX Processed Date for each Month
+Create a table called 'processed_dtl' with columns id int, mth_key varchar(10), processed_date Date
+Insert few records
+Write java program to find month wise max processed date. 
+Print MONTH KEY and MAX Processed Date for each Month
