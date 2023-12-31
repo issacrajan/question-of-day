@@ -37,13 +37,12 @@ public class Day01 {
 		for (String input : inputList) {
 			int index = input.indexOf('=');// separator for month and day
 			String month = input.substring(0, index);
-			String day = input.substring(index + 1, input.length());
+			String day = input.substring(index + 1);
 
 			if (monthWiseMaxDayMap.containsKey(month)) {
 				String maxDay = monthWiseMaxDayMap.get(month);
 				int inpuDay = Integer.parseInt(day.substring(day.length() - 2, day.length()));
-				int existingDay = Integer
-						.parseInt(maxDay.substring(maxDay.length() - 2, maxDay.length()));
+				int existingDay = Integer.parseInt(maxDay.substring(maxDay.length() - 2, maxDay.length()));
 				if (inpuDay > existingDay) {
 
 					monthWiseMaxDayMap.put(month, day);
