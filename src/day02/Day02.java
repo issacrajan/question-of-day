@@ -20,6 +20,7 @@ public class Day02 {
 	}
 
 	public void readFileAndAddToStudentList() throws IOException {
+		// TODO update your file name here..
 		String fileNameWithPath = "";
 		BufferedReader br = new BufferedReader(new FileReader(new File(fileNameWithPath)));
 
