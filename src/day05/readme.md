@@ -6,11 +6,11 @@ employee, employee_address, employee_login_logout
 
 #### create a Spring boot app.
 #### create endpoints for 
-#### /employee/create
-#### /employee/update
-#### /employee/list
+* /employee/create
+* /employee/update
+* /employee/list
 
 
 #### create endpoints for Login time and Logout time
-#### /employee/login
-#### /employee/logout
+* /employee/login
+* /employee/logout
