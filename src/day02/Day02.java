@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,7 +17,8 @@ public class Day02 {
 
 	private List<StudentDTO> studentList = new ArrayList<>();
 
-	public static void main(String[] args) throws IOException {
+	public static void main(
+			String[] args) throws IOException {
 		Day02 day02 = new Day02();
 		day02.readFileAndAddToStudentList();
 		day02.print();
@@ -25,7 +27,7 @@ public class Day02 {
 
 	public void readFileAndAddToStudentList() throws IOException {
 		// TODO update your file name here..
-		String fileNameWithPath = "/home/issac/work/ws-react-app/question/student.txt";
+		String fileNameWithPath = "C:\\Users\\91990\\eclipse-workspace\\question-of-day\\student-data.txt";
 		BufferedReader br = new BufferedReader(new FileReader(new File(fileNameWithPath)));
 
 		String line;
@@ -42,9 +44,12 @@ public class Day02 {
 			int index = studentList.indexOf(dto);
 			if (index >= 0) {
 				// existing or found
-				dto = studentList.get(index);
+				StudentDTO existingDTO = studentList.get(index);
+				existingDTO.addMark(subject, new BigDecimal(mark));
 			} else {
 				// new
+				dto.addMark(subject, new BigDecimal(mark));
+				studentList.add(dto);
 			}
 			// write your code here
 			// logic
@@ -55,10 +60,14 @@ public class Day02 {
 		}
 
 		// close the BufferedReader
+		br.close();
 
 	}
 
 	public void print() {
 		// write your code here
+		for (StudentDTO s : studentList) {
+			System.out.println(s);
+		}
 	}
 }
