@@ -1,6 +1,10 @@
 ## CRUD operations using JDBC
-Create tables tables_detail.sql
-employee, employee_address, employee_login_logout
+Create tables using the file: tables_detail.sql
+
+#### Table Names
+1. employee
+2. employee_address
+3. employee_login_logout
 
 #### Use JDBC for all insert / updates.
 
@@ -8,7 +12,7 @@ employee, employee_address, employee_login_logout
 #### create endpoints for 
 * /employee/create
 * /employee/update
-* /employee/list
+* /employee/listall
 
 
 #### create endpoints for Login time and Logout time
