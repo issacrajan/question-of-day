@@ -8,4 +8,7 @@ public class EmployeeLoginDTO {
 	private LocalDate loginDate;
 	private LocalDateTime loginTs;
 
+	private String employeeId;
+	private LocalDate loginDate;
+	private LocalDateTime loginTs;
 }

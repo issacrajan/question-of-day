@@ -7,6 +7,15 @@ public class EmployeeDTO {
 	private String employeeId;
 	private String employeeName;
 	private LocalDate joinedDate;
+	
+	
+
+	public EmployeeDTO(String employeeId, String employeeName, LocalDate joinedDate) {
+		super();
+		this.employeeId = employeeId;
+		this.employeeName = employeeName;
+		this.joinedDate = joinedDate;
+	}
 
 	public String getEmployeeId() {
 		return employeeId;
