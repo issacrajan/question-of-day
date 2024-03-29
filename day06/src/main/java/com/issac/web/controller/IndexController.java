@@ -11,20 +11,21 @@ import com.issac.web.dto.LoginDTO;
 @Controller
 public class IndexController {
 
-	@RequestMapping("/")
-	public String displayHomePage(
-			Model model) {
-		return homePage(model);
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public String displayHomePage(Model model) {
+		LoginDTO login = new LoginDTO();
+		login.setUserId("issac1234");
+		model.addAttribute("login", login);
+
+		return "index";
 	}
 
 	@RequestMapping("/index")
-	public String displayLoginPage(
-			Model model) {
+	public String displayLoginPage(Model model) {
 		return homePage(model);
 	}
 
-	private String homePage(
-			Model model) {
+	private String homePage(Model model) {
 		LoginDTO login = new LoginDTO();
 		login.setUserId("issac");
 		model.addAttribute("login", login);
@@ -32,14 +33,12 @@ public class IndexController {
 		return "index";
 	}
 
-	@RequestMapping(value = "/index", method = RequestMethod.POST)
-	public String submitLoginPage(
-			Model model,
-			@ModelAttribute("login") LoginDTO login) {
+	@RequestMapping(value = "/index2", method = RequestMethod.POST)
+	public String submitLoginPage(Model model, @ModelAttribute("login") LoginDTO login) {
 
 		System.out.println(login);
 		model.addAttribute("login", login);
 
-		return "index";
+		return "redirect:dashboard";
 	}
 }

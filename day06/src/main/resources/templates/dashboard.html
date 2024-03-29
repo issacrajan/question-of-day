@@ -12,20 +12,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-.tbl{
-border-spacing: 0;
+.tbl {
+	border-spacing: 0;
 }
 
-.tblheader{
-margin: 8px;
+.tblheader {
+	margin: 8px;
 }
+
 .col {
 	padding: 8px;
 	border-bottom: 2px solid blue;
 }
-.colheader{
-text-align: center;
-font-weight: 600;
+
+.colheader {
+	text-align: center;
+	font-weight: 600;
 }
 </style>
 </head>
@@ -33,13 +35,13 @@ font-weight: 600;
 <body>
 	<div style="width: 600px; margin: 16px; margin: auto;">
 		<table class="tbl">
-			<thead >
-			<tr class="tblheader">
-				<td class="colheader" > Product Name</td>
-				<td class="colheader" >Month</td>
-				<td class="colheader" >Quantity</td>
-				<td class="colheader" >Sales Amount</td>
-			</tr>
+			<thead>
+				<tr class="tblheader">
+					<td class="colheader">Product Name</td>
+					<td class="colheader">Month</td>
+					<td class="colheader">Quantity</td>
+					<td class="colheader">Sales Amount</td>
+				</tr>
 			</thead>
 			<tbody>
 				<tr style="padding: 6px" th:each="sale: ${sales}">
