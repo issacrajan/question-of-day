@@ -1,13 +1,15 @@
-*{
+* {
 	background-color: wheat;
 	font-family: "Roboto", sans-serif;
-  
-  font-style: normal;
+	font-style: normal;
+}
+
+.error {
+	color: red;
 }
 
 .container {
 	border: 2px solid blue;
-	
 	display: flex;
 	flex-direction: column;
 	margin: 2px;
@@ -21,7 +23,7 @@
 	justify-content: space-between;
 }
 
-.btn{
+.btn {
 	padding: 4px;
 	display: flex;
 }
